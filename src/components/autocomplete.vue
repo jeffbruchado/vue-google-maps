@@ -1,5 +1,7 @@
 <template>
-  <input ref="input" v-bind="$attrs" v-on="$attrs" />
+  <slot :attrs="$attrs" :listeners="$listeners">
+    <input ref="input" v-bind="$attrs" v-on="$listeners" />
+  </slot>
 </template>
 
 <script>
